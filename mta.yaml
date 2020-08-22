@@ -1,0 +1,17 @@
+ID: MyWorkflowProject
+_schema-version: '2.1'
+version: 0.0.1
+modules:
+  - name: MyWorkflow
+    type: com.sap.application.content
+    path: MyWorkflow
+    requires:
+      - name: my-workflow-instance
+        parameters:
+          content-target: true
+resources:
+  - name: my-workflow-instance
+    parameters:
+      service-plan: lite
+      service: workflow
+    type: org.cloudfoundry.existing-service

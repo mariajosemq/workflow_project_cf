@@ -1,0 +1,42 @@
+{
+    "id": "approvalform",
+    "schemaVersion": "1.0.0",
+    "name": "ApprovalForm",
+    "revision": "1.0",
+    "type": "task",
+    "readOnly": false,
+    "content": [
+        {
+            "id": "title",
+            "type": "string",
+            "label": "Title",
+            "readOnly": false,
+            "value": "${context.product}",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "id": "price",
+            "type": "float",
+            "label": "Price",
+            "readOnly": false,
+            "value": "${context.price}",
+            "constraints": {
+                "required": false
+            }
+        }
+    ],
+    "decisions": [
+        {
+            "id": "approve",
+            "text": "Approve",
+            "decisionType": "positive"
+        },
+        {
+            "id": "reject",
+            "text": "Reject",
+            "decisionType": "negative"
+        }
+    ]
+}

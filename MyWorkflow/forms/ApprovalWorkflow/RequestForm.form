@@ -1,0 +1,38 @@
+{
+    "id": "requestform",
+    "schemaVersion": "1.0.0",
+    "name": "RequestForm",
+    "revision": "1.0",
+    "type": "start",
+    "readOnly": false,
+    "content": [
+        {
+            "id": "title",
+            "type": "string",
+            "label": "Title",
+            "readOnly": false,
+            "value": "${context.product}",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "id": "price",
+            "type": "float",
+            "label": "Price",
+            "readOnly": false,
+            "value": "${context.price}",
+            "constraints": {
+                "required": false
+            }
+        }
+    ],
+    "actions": [
+        {
+            "id": "action1",
+            "text": "Request Book",
+            "workflowDefinitionId": "approvalworkflow",
+            "workflowPath": "/MyWorkflowProject/MyWorkflow/workflows/ApprovalWorkflow.workflow"
+        }
+    ]
+}
